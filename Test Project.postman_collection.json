@@ -1,0 +1,195 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test Project",
+		"_postman_id": "79a22670-d39c-d591-6c48-ee770a02269a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"description": "",
+			"item": [
+				{
+					"name": "user verification",
+					"request": {
+						"url": "localhost:8080/api/user/verification",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"615776a1748e8efaebff207d\",\n  \"secretCode\": \"52448\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "user register",
+					"request": {
+						"url": "localhost:8080/api/user/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Alireza\",\n  \"phoneNumber\": \"09128044654\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"url": "localhost:8080/api/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phoneNumber\": \"09128044654\"\n}"
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"url": "localhost:8080/api/user/profile",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjE1Nzc2YTE3NDhlOGVmYWViZmYyMDdkIiwibmFtZSI6IkFsaXJlemEiLCJyb2xlIjoicmVwb3J0ZXIifSwiaWF0IjoxNjMzMTIxOTUzLCJleHAiOjE2MzM3MjY3NTN9.D84d9pTKtEzgtBnUBzxlCYIk57zFKVa_tuymtuf1wdA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"description": "",
+			"item": [
+				{
+					"name": "all products",
+					"request": {
+						"url": "localhost:8080/api/product/all",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjE1Nzc2YTE3NDhlOGVmYWViZmYyMDdkIiwibmFtZSI6IkFsaXJlemEiLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjMzMTMzOTcyLCJleHAiOjE2MzMxMzc1NzJ9.KhABX9FR_QfvAo83mKde1UzXPiP2-rCCQehH_tlVabQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "search product",
+					"request": {
+						"url": "localhost:8080/api/product/search/tv",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjE1Nzc2YTE3NDhlOGVmYWViZmYyMDdkIiwibmFtZSI6IkFsaXJlemEiLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjMzMTMzOTcyLCJleHAiOjE2MzMxMzc1NzJ9.KhABX9FR_QfvAo83mKde1UzXPiP2-rCCQehH_tlVabQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "provider products",
+					"request": {
+						"url": "localhost:8080/api/product/provider/amazon",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjE1Nzc2YTE3NDhlOGVmYWViZmYyMDdkIiwibmFtZSI6IkFsaXJlemEiLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjMzMTMzOTcyLCJleHAiOjE2MzMxMzc1NzJ9.KhABX9FR_QfvAo83mKde1UzXPiP2-rCCQehH_tlVabQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"url": "localhost:8080/api/product",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiNjE1Nzc2YTE3NDhlOGVmYWViZmYyMDdkIiwibmFtZSI6IkFsaXJlemEiLCJyb2xlIjoiYWRtaW4ifSwiaWF0IjoxNjMzMTMyODc5LCJleHAiOjE2MzMxMzY0Nzl9.yx7Q0UjFjFdLu-tyitYyalaAhwmSjtgYt8ITg4-vhkQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"hello\": \"this is change\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
